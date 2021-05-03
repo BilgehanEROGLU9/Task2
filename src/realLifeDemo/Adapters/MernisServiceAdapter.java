@@ -20,7 +20,6 @@ public class MernisServiceAdapter implements ICustomerCheckService{
 			return kpsPublicSoapProxy.TCKimlikNoDogrula(Long.parseLong(customer.getNationalIdentity()), customer.getFirstName().toUpperCase(),
 					customer.getLastName().toUpperCase(), customer.getDateOfBirth());
 		} catch (NumberFormatException | RemoteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return kontrol;
